@@ -16,6 +16,10 @@
   "name": "Maureen Stevens Design",
   "url": "https://www.maureenstevens.com/"
  },
+ "times": [
+  "day",
+  "night"
+ ],
  "nodes": [
   {
    "id": "kitchen",
@@ -76,27 +80,51 @@
    "panos": {
     "floor-a_anabelle__doors-closed": {
      "full": "pano_kitchen_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_m.jpg"
+     "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
     },
     "floor-a_anabelle__doors-all_open": {
      "full": "pano_kitchen_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_m.jpg"
+     "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-closed": {
      "full": "pano_kitchen_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-b_boldara__doors-closed_m.jpg"
+     "mobile": "pano_kitchen_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-b_boldara__doors-closed_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-all_open": {
      "full": "pano_kitchen_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_m.jpg"
+     "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-closed": {
      "full": "pano_kitchen_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-c_cobble__doors-closed_m.jpg"
+     "mobile": "pano_kitchen_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-c_cobble__doors-closed_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-all_open": {
      "full": "pano_kitchen_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_m.jpg"
+     "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
     }
    },
    "photos": [
@@ -187,27 +215,51 @@
    "panos": {
     "floor-a_anabelle__doors-closed": {
      "full": "pano_island_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_island_floor-a_anabelle__doors-closed_m.jpg"
+     "mobile": "pano_island_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
     },
     "floor-a_anabelle__doors-all_open": {
      "full": "pano_island_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_island_floor-a_anabelle__doors-all_open_m.jpg"
+     "mobile": "pano_island_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-closed": {
      "full": "pano_island_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_island_floor-b_boldara__doors-closed_m.jpg"
+     "mobile": "pano_island_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-b_boldara__doors-closed_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-all_open": {
      "full": "pano_island_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_island_floor-b_boldara__doors-all_open_m.jpg"
+     "mobile": "pano_island_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-closed": {
      "full": "pano_island_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_island_floor-c_cobble__doors-closed_m.jpg"
+     "mobile": "pano_island_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-c_cobble__doors-closed_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-all_open": {
      "full": "pano_island_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_island_floor-c_cobble__doors-all_open_m.jpg"
+     "mobile": "pano_island_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
     }
    },
    "photos": [
@@ -222,12 +274,6 @@
      "label": "Brass hood & cooktop",
      "yaw": -0.05,
      "pitch": 10.04
-    },
-    {
-     "still": "Still_06_Stools_Detail",
-     "label": "Curved stool backs",
-     "yaw": -0.44,
-     "pitch": -67.25
     },
     {
      "still": "Still_09_Tall_Wall",
@@ -308,27 +354,51 @@
    "panos": {
     "floor-a_anabelle__doors-closed": {
      "full": "pano_breakfast_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_m.jpg"
+     "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
     },
     "floor-a_anabelle__doors-all_open": {
      "full": "pano_breakfast_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_m.jpg"
+     "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-closed": {
      "full": "pano_breakfast_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-b_boldara__doors-closed_m.jpg"
+     "mobile": "pano_breakfast_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-b_boldara__doors-closed_night_m.jpg"
+     }
     },
     "floor-b_boldara__doors-all_open": {
      "full": "pano_breakfast_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_m.jpg"
+     "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-closed": {
      "full": "pano_breakfast_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-c_cobble__doors-closed_m.jpg"
+     "mobile": "pano_breakfast_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-c_cobble__doors-closed_night_m.jpg"
+     }
     },
     "floor-c_cobble__doors-all_open": {
      "full": "pano_breakfast_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_m.jpg"
+     "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
     }
    },
    "photos": [

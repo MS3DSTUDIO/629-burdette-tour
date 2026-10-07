@@ -166,7 +166,7 @@
 </section>
 
 <div class="title ui"><h2>629 Burdette St</h2><p>Kitchen · 360° tour</p></div>
-<div class="hint ui" id="hint">Drag to look around · circles move you · gold dots open the appliances · camera icons show photos</div>
+<div class="hint ui" id="hint">Drag to look around · circles move you · gold dots open the appliances · camera icons show photos · switch Day / Night below</div>
 <div class="loc-name" id="locname"></div>
 
 <div class="topbtns ui">
@@ -180,6 +180,7 @@
   <div class="row"><span class="lbl">Location</span><div class="seg" id="segNode"></div></div>
   <div class="row"><span class="lbl">Floor</span><div class="seg" id="segFloor"></div></div>
   <div class="row"><span class="lbl">Appliances</span><div class="seg" id="segDoors"></div></div>
+  <div class="row" id="rowTime"><span class="lbl">Lighting</span><div class="seg" id="segTime"></div></div>
 </nav>
 
 <a class="logo ui" id="logo" href="https://www.maureenstevens.com/" target="_blank" rel="noopener" aria-label="Maureen Stevens Design website">
@@ -217,20 +218,21 @@
 
   if (T.client && T.client.url) $('logo').href = T.client.url;
 
-  const S = {node:T.default_node, floor:T.default_floor, doors:T.default_doors};
+  const S = {node:T.default_node, floor:T.default_floor, doors:T.default_doors, time:'day'};
+  const TIMES = T.times || ['day'];
   const nodeById = Object.fromEntries(T.nodes.map(n=>[n.id,n]));
   const stills = T.stills || [];
   const stillIdx = Object.fromEntries(stills.map((s,i)=>[s.id,i]));
-  const sid = (n,f,d)=>`${n}|${f}|${d}`;
-  const url = (n,f,d)=>{const p=nodeById[n].panos[`floor-${f}__doors-${d}`]; return p ? (useMobile ? p.mobile : p.full) : null;};
+  const sid = (n,f,d,t)=>`${n}|${f}|${d}|${t}`;
+  const url = (n,f,d,t)=>{let p=nodeById[n].panos[`floor-${f}__doors-${d}`]; if(p && t==='night') p=p.night; return p ? (useMobile ? p.mobile : p.full) : null;};
 
   const ICON_ARROW = '<svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>';
   const ICON_CAM   = '<svg viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg>';
   function tip(div, a){ div.classList.add(a.cls); div.innerHTML = (a.icon||'') + `<span class="tipx">${a.label}</span>`; }
 
   const scenes = {};
-  for (const n of T.nodes) for (const f of Object.keys(T.floors)) for (const d of Object.keys(T.doors)){
-    const u = url(n.id,f,d); if(!u) continue;
+  for (const n of T.nodes) for (const f of Object.keys(T.floors)) for (const d of Object.keys(T.doors)) for (const t of TIMES){
+    const u = url(n.id,f,d,t); if(!u) continue;
     const hs = [];
     for (const l of n.links) hs.push({pitch:l.pitch, yaw:l.yaw, type:'custom', createTooltipFunc:tip,
         createTooltipArgs:{cls:'hs-link', icon:ICON_ARROW, label:l.label}, clickHandlerFunc:()=>goNode(l.to)});
@@ -240,12 +242,12 @@
     for (const p of (n.photos||[])) if (p.still in stillIdx) hs.push({pitch:p.pitch, yaw:p.yaw, type:'custom', createTooltipFunc:tip,
         createTooltipArgs:{cls:'hs-cam', icon:ICON_CAM, label:'Photo · '+stills[stillIdx[p.still]].caption},
         clickHandlerFunc:()=>openGallery(stillIdx[p.still])});
-    scenes[sid(n.id,f,d)] = {type:'equirectangular', panorama:u, hfov:n.view.hfov||100,
+    scenes[sid(n.id,f,d,t)] = {type:'equirectangular', panorama:u, hfov:n.view.hfov||100,
                              yaw:n.view.yaw||0, pitch:n.view.pitch||0, hotSpots:hs};
   }
 
   const viewer = pannellum.viewer('pano', {
-    default:{firstScene:sid(S.node,S.floor,S.doors), sceneFadeDuration:800, autoLoad:true, showControls:false,
+    default:{firstScene:sid(S.node,S.floor,S.doors,S.time), sceneFadeDuration:800, autoLoad:true, showControls:false,
              compass:false, minHfov:45, maxHfov:118, friction:0.15, autoRotate:reduce?0:-2.2, autoRotateInactivityDelay:-1},
     scenes
   });
@@ -267,14 +269,15 @@
 
   function showLoc(label){ const el=$('locname'); el.textContent=label; el.classList.remove('show'); void el.offsetWidth; el.classList.add('show'); }
 
-  function load(n,f,d){
-    const id=sid(n,f,d); if(!scenes[id]) return;
+  function load(n,f,d,t){
+    const id=sid(n,f,d,t); if(!scenes[id]) return;
     const moving = n!==S.node;
-    S.node=n; S.floor=f; S.doors=d; paint();
+    S.node=n; S.floor=f; S.doors=d; S.time=t; paint();
     viewer.loadScene(id,'same','same','same');
     if(moving) setTimeout(()=>showLoc(nodeById[n].label), 500);
   }
-  const goNode=n=>load(n,S.floor,S.doors), setFloor=f=>load(S.node,f,S.doors), setDoors=d=>load(S.node,S.floor,d);
+  const goNode=n=>load(n,S.floor,S.doors,S.time), setFloor=f=>load(S.node,f,S.doors,S.time),
+        setDoors=d=>load(S.node,S.floor,d,S.time), setTime=t=>load(S.node,S.floor,S.doors,t);
 
   function seg(el, items, cur, fn){
     el.innerHTML='';
@@ -290,12 +293,14 @@
     seg($('segNode'), T.nodes.map(n=>[n.id,n.label]), S.node, goNode);
     seg($('segFloor'), fl, S.floor, setFloor);
     seg($('segDoors'), [['closed','Closed'],['all_open','Open']], S.doors, setDoors);
+    if (TIMES.length>1) seg($('segTime'), [['day','Day'],['night','Night']], S.time, setTime); else $('rowTime').style.display='none';
   }
   paint(); addEventListener('resize', paint);
 
   function prefetch(){
     setTimeout(()=>{ for (const f of Object.keys(T.floors)) for (const d of Object.keys(T.doors)){
-      const u=url(S.node,f,d); if(u){ const i=new Image(); i.src=u; } } }, 1500);
+      const u=url(S.node,f,d,S.time); if(u){ const i=new Image(); i.src=u; } }
+      for (const t of TIMES){ const u=url(S.node,S.floor,S.doors,t); if(u){ const i=new Image(); i.src=u; } } }, 1500);
   }
 
   $('btnFull').onclick = ()=>{ document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.(); };
