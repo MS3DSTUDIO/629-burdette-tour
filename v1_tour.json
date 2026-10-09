@@ -1,0 +1,578 @@
+{
+ "project": "629 Burdette St \u00b7 Kitchen",
+ "default_node": "kitchen",
+ "default_floor": "c_cobble",
+ "default_doors": "closed",
+ "floors": {
+  "a_anabelle": "A - Anabelle St Laurent",
+  "b_boldara": "B - Boldara Nero/Oro Checker",
+  "c_cobble": "C - Cobble Brown"
+ },
+ "doors": {
+  "closed": "All closed",
+  "all_open": "All appliances open"
+ },
+ "client": {
+  "name": "Maureen Stevens Design",
+  "url": "https://www.maureenstevens.com/"
+ },
+ "times": [
+  "day",
+  "night"
+ ],
+ "nodes": [
+  {
+   "id": "kitchen",
+   "label": "Kitchen",
+   "view": {
+    "yaw": 55,
+    "pitch": -8,
+    "hfov": 105
+   },
+   "links": [
+    {
+     "to": "island",
+     "label": "Island",
+     "yaw": 179.94,
+     "pitch": -33.99
+    },
+    {
+     "to": "breakfast",
+     "label": "Breakfast Nook",
+     "yaw": 84.96,
+     "pitch": -41.27
+    }
+   ],
+   "appliances": [
+    {
+     "id": "dishwasher",
+     "label": "Dishwasher",
+     "action": "toggle_doors:dishwasher_open",
+     "yaw": -57.13,
+     "pitch": -45.95,
+     "visible": true
+    },
+    {
+     "id": "freezer",
+     "label": "Freezer",
+     "action": "toggle_doors:freezer_open",
+     "yaw": -116.23,
+     "pitch": -5.67,
+     "visible": true
+    },
+    {
+     "id": "fridge",
+     "label": "Refrigerator",
+     "action": "toggle_doors:fridge_open",
+     "yaw": -106.64,
+     "pitch": -6.05,
+     "visible": true
+    },
+    {
+     "id": "wine",
+     "label": "Wine Fridge",
+     "action": "toggle_doors:wine_open",
+     "yaw": 119.89,
+     "pitch": -44.9,
+     "visible": true
+    }
+   ],
+   "panos": {
+    "floor-a_anabelle__doors-closed": {
+     "full": "pano_kitchen_floor-a_anabelle__doors-closed.jpg",
+     "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-a_anabelle__doors-all_open": {
+     "full": "pano_kitchen_floor-a_anabelle__doors-all_open.jpg",
+     "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-closed": {
+     "full": "pano_kitchen_floor-b_boldara__doors-closed.jpg",
+     "mobile": "pano_kitchen_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-b_boldara__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-all_open": {
+     "full": "pano_kitchen_floor-b_boldara__doors-all_open.jpg",
+     "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-closed": {
+     "full": "pano_kitchen_floor-c_cobble__doors-closed.jpg",
+     "mobile": "pano_kitchen_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-c_cobble__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-all_open": {
+     "full": "pano_kitchen_floor-c_cobble__doors-all_open.jpg",
+     "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_kitchen_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
+    }
+   },
+   "photos": [
+    {
+     "still": "Still_01_Hero",
+     "label": "Island & range - hero",
+     "yaw": 179.86,
+     "pitch": -30.34
+    },
+    {
+     "still": "Still_02_Range",
+     "label": "Sink-to-range run",
+     "yaw": 0.0,
+     "pitch": -34.97
+    },
+    {
+     "still": "Still_03_Sink_Window",
+     "label": "Faucet & window",
+     "yaw": -57.64,
+     "pitch": -11.66
+    },
+    {
+     "still": "Still_05_Hood_Detail",
+     "label": "Brass hood & cooktop",
+     "yaw": 0.0,
+     "pitch": 39.81
+    },
+    {
+     "still": "Still_09_Tall_Wall",
+     "label": "Fridge & Gaggenau oven wall",
+     "yaw": -106.57,
+     "pitch": -5.03
+    },
+    {
+     "still": "Still_10_Nook_to_Kitchen",
+     "label": "From the nook - whole kitchen",
+     "yaw": 138.64,
+     "pitch": -23.72
+    },
+    {
+     "still": "Still_15_Wardrobe",
+     "label": "Wardrobe - full elevation",
+     "yaw": -165.66,
+     "pitch": 0.0
+    }
+   ]
+  },
+  {
+   "id": "island",
+   "label": "Island",
+   "view": {
+    "yaw": 0,
+    "pitch": -6,
+    "hfov": 100
+   },
+   "links": [
+    {
+     "to": "kitchen",
+     "label": "Kitchen",
+     "yaw": -0.06,
+     "pitch": -33.99
+    },
+    {
+     "to": "breakfast",
+     "label": "Breakfast Nook",
+     "yaw": 35.59,
+     "pitch": -27.18
+    }
+   ],
+   "appliances": [
+    {
+     "id": "freezer",
+     "label": "Freezer",
+     "action": "toggle_doors:freezer_open",
+     "yaw": -71.83,
+     "pitch": -6.0,
+     "visible": true
+    },
+    {
+     "id": "fridge",
+     "label": "Refrigerator",
+     "action": "toggle_doors:fridge_open",
+     "yaw": -62.45,
+     "pitch": -5.6,
+     "visible": true
+    }
+   ],
+   "panos": {
+    "floor-a_anabelle__doors-closed": {
+     "full": "pano_island_floor-a_anabelle__doors-closed.jpg",
+     "mobile": "pano_island_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-a_anabelle__doors-all_open": {
+     "full": "pano_island_floor-a_anabelle__doors-all_open.jpg",
+     "mobile": "pano_island_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-closed": {
+     "full": "pano_island_floor-b_boldara__doors-closed.jpg",
+     "mobile": "pano_island_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-b_boldara__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-all_open": {
+     "full": "pano_island_floor-b_boldara__doors-all_open.jpg",
+     "mobile": "pano_island_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-closed": {
+     "full": "pano_island_floor-c_cobble__doors-closed.jpg",
+     "mobile": "pano_island_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_island_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-c_cobble__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-all_open": {
+     "full": "pano_island_floor-c_cobble__doors-all_open.jpg",
+     "mobile": "pano_island_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_island_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
+    }
+   },
+   "photos": [
+    {
+     "still": "Still_03_Sink_Window",
+     "label": "Faucet & window",
+     "yaw": -25.68,
+     "pitch": -6.03
+    },
+    {
+     "still": "Still_05_Hood_Detail",
+     "label": "Brass hood & cooktop",
+     "yaw": -0.05,
+     "pitch": 10.04
+    },
+    {
+     "still": "Still_09_Tall_Wall",
+     "label": "Fridge & Gaggenau oven wall",
+     "yaw": -62.56,
+     "pitch": -4.65
+    },
+    {
+     "still": "Still_10_Nook_to_Kitchen",
+     "label": "From the nook - whole kitchen",
+     "yaw": 36.87,
+     "pitch": -21.8
+    },
+    {
+     "still": "Still_15_Wardrobe",
+     "label": "Wardrobe - full elevation",
+     "yaw": -133.03,
+     "pitch": 0.0
+    }
+   ]
+  },
+  {
+   "id": "breakfast",
+   "label": "Breakfast Nook",
+   "view": {
+    "yaw": 119,
+    "pitch": -8,
+    "hfov": 100
+   },
+   "links": [
+    {
+     "to": "kitchen",
+     "label": "Kitchen",
+     "yaw": -95.04,
+     "pitch": -41.27
+    },
+    {
+     "to": "island",
+     "label": "Island",
+     "yaw": -144.41,
+     "pitch": -27.18
+    }
+   ],
+   "appliances": [
+    {
+     "id": "dishwasher",
+     "label": "Dishwasher",
+     "action": "toggle_doors:dishwasher_open",
+     "yaw": -81.52,
+     "pitch": -21.47,
+     "visible": true
+    },
+    {
+     "id": "freezer",
+     "label": "Freezer",
+     "action": "toggle_doors:freezer_open",
+     "yaw": -108.6,
+     "pitch": -3.69,
+     "visible": true
+    },
+    {
+     "id": "fridge",
+     "label": "Refrigerator",
+     "action": "toggle_doors:fridge_open",
+     "yaw": -102.27,
+     "pitch": -3.8,
+     "visible": true
+    },
+    {
+     "id": "wine",
+     "label": "Wine Fridge",
+     "action": "toggle_doors:wine_open",
+     "yaw": -127.98,
+     "pitch": -43.43,
+     "visible": true
+    }
+   ],
+   "panos": {
+    "floor-a_anabelle__doors-closed": {
+     "full": "pano_breakfast_floor-a_anabelle__doors-closed.jpg",
+     "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-a_anabelle__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-a_anabelle__doors-all_open": {
+     "full": "pano_breakfast_floor-a_anabelle__doors-all_open.jpg",
+     "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-a_anabelle__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-closed": {
+     "full": "pano_breakfast_floor-b_boldara__doors-closed.jpg",
+     "mobile": "pano_breakfast_floor-b_boldara__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-b_boldara__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-b_boldara__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-b_boldara__doors-all_open": {
+     "full": "pano_breakfast_floor-b_boldara__doors-all_open.jpg",
+     "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-b_boldara__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-closed": {
+     "full": "pano_breakfast_floor-c_cobble__doors-closed.jpg",
+     "mobile": "pano_breakfast_floor-c_cobble__doors-closed_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-c_cobble__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-c_cobble__doors-closed_night_m.jpg"
+     }
+    },
+    "floor-c_cobble__doors-all_open": {
+     "full": "pano_breakfast_floor-c_cobble__doors-all_open.jpg",
+     "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_m.jpg",
+     "night": {
+      "full": "pano_breakfast_floor-c_cobble__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_night_m.jpg"
+     }
+    }
+   },
+   "photos": [
+    {
+     "still": "Still_01_Hero",
+     "label": "Island & range - hero",
+     "yaw": -124.65,
+     "pitch": -16.19
+    },
+    {
+     "still": "Still_02_Range",
+     "label": "Sink-to-range run",
+     "yaw": -67.94,
+     "pitch": -17.73
+    },
+    {
+     "still": "Still_03_Sink_Window",
+     "label": "Faucet & window",
+     "yaw": -75.75,
+     "pitch": -6.41
+    },
+    {
+     "still": "Still_04_Breakfast",
+     "label": "Breakfast nook",
+     "yaw": 118.61,
+     "pitch": -25.59
+    },
+    {
+     "still": "Still_05_Hood_Detail",
+     "label": "Brass hood & cooktop",
+     "yaw": -75.19,
+     "pitch": 15.85
+    },
+    {
+     "still": "Still_09_Tall_Wall",
+     "label": "Fridge & Gaggenau oven wall",
+     "yaw": -102.24,
+     "pitch": -3.16
+    },
+    {
+     "still": "Still_10_Nook_to_Kitchen",
+     "label": "From the nook - whole kitchen",
+     "yaw": -145.75,
+     "pitch": -22.88
+    },
+    {
+     "still": "Still_15_Wardrobe",
+     "label": "Wardrobe - full elevation",
+     "yaw": -141.45,
+     "pitch": 0.0
+    }
+   ]
+  }
+ ],
+ "stills": [
+  {
+   "id": "Still_01_Hero",
+   "caption": "The Kitchen",
+   "src": "v1_still_Still_01_Hero.jpg",
+   "thumb": "v1_thumb_Still_01_Hero.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_02_Range",
+   "caption": "Sink to Range",
+   "src": "v1_still_Still_02_Range.jpg",
+   "thumb": "v1_thumb_Still_02_Range.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_03_Sink_Window",
+   "caption": "Workstation Sink",
+   "src": "v1_still_Still_03_Sink_Window.jpg",
+   "thumb": "v1_thumb_Still_03_Sink_Window.jpg",
+   "w": 1920,
+   "h": 2400
+  },
+  {
+   "id": "Still_04_Breakfast",
+   "caption": "Breakfast Nook",
+   "src": "v1_still_Still_04_Breakfast.jpg",
+   "thumb": "v1_thumb_Still_04_Breakfast.jpg",
+   "w": 1600,
+   "h": 2400
+  },
+  {
+   "id": "Still_05_Hood_Detail",
+   "caption": "Brass Hood",
+   "src": "v1_still_Still_05_Hood_Detail.jpg",
+   "thumb": "v1_thumb_Still_05_Hood_Detail.jpg",
+   "w": 1920,
+   "h": 2400
+  },
+  {
+   "id": "Still_06_Stools_Detail",
+   "caption": "Bar Stools",
+   "src": "v1_still_Still_06_Stools_Detail.jpg",
+   "thumb": "v1_thumb_Still_06_Stools_Detail.jpg",
+   "w": 1600,
+   "h": 2400
+  },
+  {
+   "id": "Still_07_Aerial",
+   "caption": "Overview",
+   "src": "v1_still_Still_07_Aerial.jpg",
+   "thumb": "v1_thumb_Still_07_Aerial.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_08_Plan",
+   "caption": "Plan View",
+   "src": "v1_still_Still_08_Plan.jpg",
+   "thumb": "v1_thumb_Still_08_Plan.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_09_Tall_Wall",
+   "caption": "Refrigerator & Ovens",
+   "src": "v1_still_Still_09_Tall_Wall.jpg",
+   "thumb": "v1_thumb_Still_09_Tall_Wall.jpg",
+   "w": 1600,
+   "h": 2400
+  },
+  {
+   "id": "Still_10_Nook_to_Kitchen",
+   "caption": "From the Nook",
+   "src": "v1_still_Still_10_Nook_to_Kitchen.jpg",
+   "thumb": "v1_thumb_Still_10_Nook_to_Kitchen.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_11_Fridge_Freezer_Open",
+   "caption": "Refrigerator & Freezer",
+   "src": "v1_still_Still_11_Fridge_Freezer_Open.jpg",
+   "thumb": "v1_thumb_Still_11_Fridge_Freezer_Open.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_12_Wine_Open",
+   "caption": "Wine Fridge",
+   "src": "v1_still_Still_12_Wine_Open.jpg",
+   "thumb": "v1_thumb_Still_12_Wine_Open.jpg",
+   "w": 1600,
+   "h": 2400
+  },
+  {
+   "id": "Still_13_Dishwasher_Open",
+   "caption": "Dishwasher",
+   "src": "v1_still_Still_13_Dishwasher_Open.jpg",
+   "thumb": "v1_thumb_Still_13_Dishwasher_Open.jpg",
+   "w": 1600,
+   "h": 2400
+  },
+  {
+   "id": "Still_14_Aerial_All_Open",
+   "caption": "Overview - Appliances Open",
+   "src": "v1_still_Still_14_Aerial_All_Open.jpg",
+   "thumb": "v1_thumb_Still_14_Aerial_All_Open.jpg",
+   "w": 2400,
+   "h": 1600
+  },
+  {
+   "id": "Still_15_Wardrobe",
+   "caption": "Wardrobe",
+   "src": "v1_still_Still_15_Wardrobe.jpg",
+   "thumb": "v1_thumb_Still_15_Wardrobe.jpg",
+   "w": 1920,
+   "h": 2400
+  }
+ ]
+}
