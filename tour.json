@@ -1,12 +1,11 @@
 {
  "project": "629 Burdette St \u00b7 Kitchen",
  "default_node": "kitchen",
- "default_floor": "c_cobble",
+ "default_floor": "opt1",
  "default_doors": "closed",
  "floors": {
-  "a_anabelle": "A - Anabelle St Laurent",
-  "b_boldara": "B - Boldara Nero/Oro Checker",
-  "c_cobble": "C - Cobble Brown"
+  "opt1": "Nook Option 1",
+  "opt2": "Nook Option 2"
  },
  "doors": {
   "closed": "All closed",
@@ -40,7 +39,7 @@
      "to": "breakfast",
      "label": "Breakfast Nook",
      "yaw": 84.96,
-     "pitch": -41.27
+     "pitch": -22.5
     }
    ],
    "appliances": [
@@ -72,58 +71,42 @@
      "id": "wine",
      "label": "Wine Fridge",
      "action": "toggle_doors:wine_open",
-     "yaw": 119.89,
-     "pitch": -44.9,
+     "yaw": 114.53,
+     "pitch": -39.71,
      "visible": true
     }
    ],
    "panos": {
-    "floor-a_anabelle__doors-closed": {
-     "full": "pano_kitchen_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_m.jpg",
+    "floor-opt1__doors-closed": {
+     "full": "pano_kitchen_floor-walnut__doors-closed.jpg",
+     "mobile": "pano_kitchen_floor-walnut__doors-closed_m.jpg",
      "night": {
-      "full": "pano_kitchen_floor-a_anabelle__doors-closed_night.jpg",
-      "mobile": "pano_kitchen_floor-a_anabelle__doors-closed_night_m.jpg"
+      "full": "pano_kitchen_floor-walnut__doors-closed_night.jpg",
+      "mobile": "pano_kitchen_floor-walnut__doors-closed_night_m.jpg"
      }
     },
-    "floor-a_anabelle__doors-all_open": {
-     "full": "pano_kitchen_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_m.jpg",
+    "floor-opt2__doors-closed": {
+     "full": "pano_kitchen_floor-walnut__doors-closed_opt2.jpg",
+     "mobile": "pano_kitchen_floor-walnut__doors-closed_opt2_m.jpg",
      "night": {
-      "full": "pano_kitchen_floor-a_anabelle__doors-all_open_night.jpg",
-      "mobile": "pano_kitchen_floor-a_anabelle__doors-all_open_night_m.jpg"
+      "full": "pano_kitchen_floor-walnut__doors-closed_opt2_night.jpg",
+      "mobile": "pano_kitchen_floor-walnut__doors-closed_opt2_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-closed": {
-     "full": "pano_kitchen_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-b_boldara__doors-closed_m.jpg",
+    "floor-opt1__doors-all_open": {
+     "full": "pano_kitchen_floor-walnut__doors-all_open.jpg",
+     "mobile": "pano_kitchen_floor-walnut__doors-all_open_m.jpg",
      "night": {
-      "full": "pano_kitchen_floor-b_boldara__doors-closed_night.jpg",
-      "mobile": "pano_kitchen_floor-b_boldara__doors-closed_night_m.jpg"
+      "full": "pano_kitchen_floor-walnut__doors-all_open_night.jpg",
+      "mobile": "pano_kitchen_floor-walnut__doors-all_open_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-all_open": {
-     "full": "pano_kitchen_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_m.jpg",
+    "floor-opt2__doors-all_open": {
+     "full": "pano_kitchen_floor-walnut__doors-all_open_opt2.jpg",
+     "mobile": "pano_kitchen_floor-walnut__doors-all_open_opt2_m.jpg",
      "night": {
-      "full": "pano_kitchen_floor-b_boldara__doors-all_open_night.jpg",
-      "mobile": "pano_kitchen_floor-b_boldara__doors-all_open_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-closed": {
-     "full": "pano_kitchen_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_kitchen_floor-c_cobble__doors-closed_m.jpg",
-     "night": {
-      "full": "pano_kitchen_floor-c_cobble__doors-closed_night.jpg",
-      "mobile": "pano_kitchen_floor-c_cobble__doors-closed_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-all_open": {
-     "full": "pano_kitchen_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_m.jpg",
-     "night": {
-      "full": "pano_kitchen_floor-c_cobble__doors-all_open_night.jpg",
-      "mobile": "pano_kitchen_floor-c_cobble__doors-all_open_night_m.jpg"
+      "full": "pano_kitchen_floor-walnut__doors-all_open_opt2_night.jpg",
+      "mobile": "pano_kitchen_floor-walnut__doors-all_open_opt2_night_m.jpg"
      }
     }
    },
@@ -191,7 +174,7 @@
      "to": "breakfast",
      "label": "Breakfast Nook",
      "yaw": 35.59,
-     "pitch": -27.18
+     "pitch": -13.62
     }
    ],
    "appliances": [
@@ -213,52 +196,36 @@
     }
    ],
    "panos": {
-    "floor-a_anabelle__doors-closed": {
-     "full": "pano_island_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_island_floor-a_anabelle__doors-closed_m.jpg",
+    "floor-opt1__doors-closed": {
+     "full": "pano_island_floor-walnut__doors-closed.jpg",
+     "mobile": "pano_island_floor-walnut__doors-closed_m.jpg",
      "night": {
-      "full": "pano_island_floor-a_anabelle__doors-closed_night.jpg",
-      "mobile": "pano_island_floor-a_anabelle__doors-closed_night_m.jpg"
+      "full": "pano_island_floor-walnut__doors-closed_night.jpg",
+      "mobile": "pano_island_floor-walnut__doors-closed_night_m.jpg"
      }
     },
-    "floor-a_anabelle__doors-all_open": {
-     "full": "pano_island_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_island_floor-a_anabelle__doors-all_open_m.jpg",
+    "floor-opt2__doors-closed": {
+     "full": "pano_island_floor-walnut__doors-closed_opt2.jpg",
+     "mobile": "pano_island_floor-walnut__doors-closed_opt2_m.jpg",
      "night": {
-      "full": "pano_island_floor-a_anabelle__doors-all_open_night.jpg",
-      "mobile": "pano_island_floor-a_anabelle__doors-all_open_night_m.jpg"
+      "full": "pano_island_floor-walnut__doors-closed_opt2_night.jpg",
+      "mobile": "pano_island_floor-walnut__doors-closed_opt2_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-closed": {
-     "full": "pano_island_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_island_floor-b_boldara__doors-closed_m.jpg",
+    "floor-opt1__doors-all_open": {
+     "full": "pano_island_floor-walnut__doors-all_open.jpg",
+     "mobile": "pano_island_floor-walnut__doors-all_open_m.jpg",
      "night": {
-      "full": "pano_island_floor-b_boldara__doors-closed_night.jpg",
-      "mobile": "pano_island_floor-b_boldara__doors-closed_night_m.jpg"
+      "full": "pano_island_floor-walnut__doors-all_open_night.jpg",
+      "mobile": "pano_island_floor-walnut__doors-all_open_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-all_open": {
-     "full": "pano_island_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_island_floor-b_boldara__doors-all_open_m.jpg",
+    "floor-opt2__doors-all_open": {
+     "full": "pano_island_floor-walnut__doors-all_open_opt2.jpg",
+     "mobile": "pano_island_floor-walnut__doors-all_open_opt2_m.jpg",
      "night": {
-      "full": "pano_island_floor-b_boldara__doors-all_open_night.jpg",
-      "mobile": "pano_island_floor-b_boldara__doors-all_open_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-closed": {
-     "full": "pano_island_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_island_floor-c_cobble__doors-closed_m.jpg",
-     "night": {
-      "full": "pano_island_floor-c_cobble__doors-closed_night.jpg",
-      "mobile": "pano_island_floor-c_cobble__doors-closed_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-all_open": {
-     "full": "pano_island_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_island_floor-c_cobble__doors-all_open_m.jpg",
-     "night": {
-      "full": "pano_island_floor-c_cobble__doors-all_open_night.jpg",
-      "mobile": "pano_island_floor-c_cobble__doors-all_open_night_m.jpg"
+      "full": "pano_island_floor-walnut__doors-all_open_opt2_night.jpg",
+      "mobile": "pano_island_floor-walnut__doors-all_open_opt2_night_m.jpg"
      }
     }
    },
@@ -346,58 +313,42 @@
      "id": "wine",
      "label": "Wine Fridge",
      "action": "toggle_doors:wine_open",
-     "yaw": -127.98,
-     "pitch": -43.43,
+     "yaw": -136.96,
+     "pitch": -48.35,
      "visible": true
     }
    ],
    "panos": {
-    "floor-a_anabelle__doors-closed": {
-     "full": "pano_breakfast_floor-a_anabelle__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_m.jpg",
+    "floor-opt1__doors-closed": {
+     "full": "pano_breakfast_floor-walnut__doors-closed.jpg",
+     "mobile": "pano_breakfast_floor-walnut__doors-closed_m.jpg",
      "night": {
-      "full": "pano_breakfast_floor-a_anabelle__doors-closed_night.jpg",
-      "mobile": "pano_breakfast_floor-a_anabelle__doors-closed_night_m.jpg"
+      "full": "pano_breakfast_floor-walnut__doors-closed_night.jpg",
+      "mobile": "pano_breakfast_floor-walnut__doors-closed_night_m.jpg"
      }
     },
-    "floor-a_anabelle__doors-all_open": {
-     "full": "pano_breakfast_floor-a_anabelle__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_m.jpg",
+    "floor-opt2__doors-closed": {
+     "full": "pano_breakfast_floor-walnut__doors-closed_opt2.jpg",
+     "mobile": "pano_breakfast_floor-walnut__doors-closed_opt2_m.jpg",
      "night": {
-      "full": "pano_breakfast_floor-a_anabelle__doors-all_open_night.jpg",
-      "mobile": "pano_breakfast_floor-a_anabelle__doors-all_open_night_m.jpg"
+      "full": "pano_breakfast_floor-walnut__doors-closed_opt2_night.jpg",
+      "mobile": "pano_breakfast_floor-walnut__doors-closed_opt2_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-closed": {
-     "full": "pano_breakfast_floor-b_boldara__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-b_boldara__doors-closed_m.jpg",
+    "floor-opt1__doors-all_open": {
+     "full": "pano_breakfast_floor-walnut__doors-all_open.jpg",
+     "mobile": "pano_breakfast_floor-walnut__doors-all_open_m.jpg",
      "night": {
-      "full": "pano_breakfast_floor-b_boldara__doors-closed_night.jpg",
-      "mobile": "pano_breakfast_floor-b_boldara__doors-closed_night_m.jpg"
+      "full": "pano_breakfast_floor-walnut__doors-all_open_night.jpg",
+      "mobile": "pano_breakfast_floor-walnut__doors-all_open_night_m.jpg"
      }
     },
-    "floor-b_boldara__doors-all_open": {
-     "full": "pano_breakfast_floor-b_boldara__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_m.jpg",
+    "floor-opt2__doors-all_open": {
+     "full": "pano_breakfast_floor-walnut__doors-all_open_opt2.jpg",
+     "mobile": "pano_breakfast_floor-walnut__doors-all_open_opt2_m.jpg",
      "night": {
-      "full": "pano_breakfast_floor-b_boldara__doors-all_open_night.jpg",
-      "mobile": "pano_breakfast_floor-b_boldara__doors-all_open_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-closed": {
-     "full": "pano_breakfast_floor-c_cobble__doors-closed.jpg",
-     "mobile": "pano_breakfast_floor-c_cobble__doors-closed_m.jpg",
-     "night": {
-      "full": "pano_breakfast_floor-c_cobble__doors-closed_night.jpg",
-      "mobile": "pano_breakfast_floor-c_cobble__doors-closed_night_m.jpg"
-     }
-    },
-    "floor-c_cobble__doors-all_open": {
-     "full": "pano_breakfast_floor-c_cobble__doors-all_open.jpg",
-     "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_m.jpg",
-     "night": {
-      "full": "pano_breakfast_floor-c_cobble__doors-all_open_night.jpg",
-      "mobile": "pano_breakfast_floor-c_cobble__doors-all_open_night_m.jpg"
+      "full": "pano_breakfast_floor-walnut__doors-all_open_opt2_night.jpg",
+      "mobile": "pano_breakfast_floor-walnut__doors-all_open_opt2_night_m.jpg"
      }
     }
    },
@@ -419,12 +370,6 @@
      "label": "Faucet & window",
      "yaw": -75.75,
      "pitch": -6.41
-    },
-    {
-     "still": "Still_04_Breakfast",
-     "label": "Breakfast nook",
-     "yaw": 118.61,
-     "pitch": -25.59
     },
     {
      "still": "Still_05_Hood_Detail",
@@ -460,7 +405,13 @@
    "src": "still_Still_01_Hero.jpg",
    "thumb": "thumb_Still_01_Hero.jpg",
    "w": 2400,
-   "h": 1600
+   "h": 1600,
+   "opt2": {
+    "src": "still_Still_01_Hero_opt2.jpg",
+    "thumb": "thumb_Still_01_Hero_opt2.jpg",
+    "w": 2400,
+    "h": 1600
+   }
   },
   {
    "id": "Still_02_Range",
@@ -484,7 +435,13 @@
    "src": "still_Still_04_Breakfast.jpg",
    "thumb": "thumb_Still_04_Breakfast.jpg",
    "w": 1600,
-   "h": 2400
+   "h": 2400,
+   "opt2": {
+    "src": "still_Still_04_Breakfast_opt2.jpg",
+    "thumb": "thumb_Still_04_Breakfast_opt2.jpg",
+    "w": 1600,
+    "h": 2400
+   }
   },
   {
    "id": "Still_05_Hood_Detail",
@@ -508,7 +465,13 @@
    "src": "still_Still_07_Aerial.jpg",
    "thumb": "thumb_Still_07_Aerial.jpg",
    "w": 2400,
-   "h": 1600
+   "h": 1600,
+   "opt2": {
+    "src": "still_Still_07_Aerial_opt2.jpg",
+    "thumb": "thumb_Still_07_Aerial_opt2.jpg",
+    "w": 2400,
+    "h": 1600
+   }
   },
   {
    "id": "Still_08_Plan",
@@ -516,7 +479,13 @@
    "src": "still_Still_08_Plan.jpg",
    "thumb": "thumb_Still_08_Plan.jpg",
    "w": 2400,
-   "h": 1600
+   "h": 1600,
+   "opt2": {
+    "src": "still_Still_08_Plan_opt2.jpg",
+    "thumb": "thumb_Still_08_Plan_opt2.jpg",
+    "w": 2400,
+    "h": 1600
+   }
   },
   {
    "id": "Still_09_Tall_Wall",
@@ -532,7 +501,13 @@
    "src": "still_Still_10_Nook_to_Kitchen.jpg",
    "thumb": "thumb_Still_10_Nook_to_Kitchen.jpg",
    "w": 2400,
-   "h": 1600
+   "h": 1600,
+   "opt2": {
+    "src": "still_Still_10_Nook_to_Kitchen_opt2.jpg",
+    "thumb": "thumb_Still_10_Nook_to_Kitchen_opt2.jpg",
+    "w": 2400,
+    "h": 1600
+   }
   },
   {
    "id": "Still_11_Fridge_Freezer_Open",
@@ -564,7 +539,13 @@
    "src": "still_Still_14_Aerial_All_Open.jpg",
    "thumb": "thumb_Still_14_Aerial_All_Open.jpg",
    "w": 2400,
-   "h": 1600
+   "h": 1600,
+   "opt2": {
+    "src": "still_Still_14_Aerial_All_Open_opt2.jpg",
+    "thumb": "thumb_Still_14_Aerial_All_Open_opt2.jpg",
+    "w": 2400,
+    "h": 1600
+   }
   },
   {
    "id": "Still_15_Wardrobe",
@@ -574,5 +555,6 @@
    "w": 1920,
    "h": 2400
   }
- ]
+ ],
+ "floor_label": "Nook"
 }

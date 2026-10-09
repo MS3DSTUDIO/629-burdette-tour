@@ -6,7 +6,7 @@
 <title>629 Burdette St · Kitchen 360°</title>
 <meta name="description" content="Interactive 360° kitchen presentation - 629 Burdette St · Maureen Stevens Design">
 <meta property="og:title" content="629 Burdette St · Kitchen 360°">
-<meta property="og:description" content="Walk through the kitchen in 360°, switch floors and open the appliances.">
+<meta property="og:description" content="Walk through the kitchen in 360°, open the appliances and switch day / night.">
 <link rel="icon" href="logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,7 +165,7 @@
   </div>
 </section>
 
-<div class="title ui"><h2>629 Burdette St</h2><p>Kitchen · 360° tour</p></div>
+<div class="title ui"><h2>629 Burdette St</h2><p>Kitchen · 360° tour · <a href="v1.html" style="color:inherit;text-decoration:underline;pointer-events:auto">Previous design</a></p></div>
 <div class="hint ui" id="hint">Drag to look around · circles move you · gold dots open the appliances · camera icons show photos · switch Day / Night below</div>
 <div class="loc-name" id="locname"></div>
 
@@ -178,7 +178,7 @@
 
 <nav class="panel ui" aria-label="Tour controls">
   <div class="row"><span class="lbl">Location</span><div class="seg" id="segNode"></div></div>
-  <div class="row"><span class="lbl">Floor</span><div class="seg" id="segFloor"></div></div>
+  <div class="row" id="rowFloor"><span class="lbl" id="lblFloor">Floor</span><div class="seg" id="segFloor"></div></div>
   <div class="row"><span class="lbl">Appliances</span><div class="seg" id="segDoors"></div></div>
   <div class="row" id="rowTime"><span class="lbl">Lighting</span><div class="seg" id="segTime"></div></div>
 </nav>
@@ -217,6 +217,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (T.client && T.client.url) $('logo').href = T.client.url;
+  if (T.floor_label) $('lblFloor').textContent = T.floor_label;
 
   const S = {node:T.default_node, floor:T.default_floor, doors:T.default_doors, time:'day'};
   const TIMES = T.times || ['day'];
@@ -291,7 +292,7 @@
     const narrow = innerWidth < 700;
     const fl = Object.entries(T.floors).map(([k,l])=>[k, narrow ? l.replace(/^(\w)\s*-\s*(\w+).*/, '$1 · $2') : l]);
     seg($('segNode'), T.nodes.map(n=>[n.id,n.label]), S.node, goNode);
-    seg($('segFloor'), fl, S.floor, setFloor);
+    if (fl.length>1) seg($('segFloor'), fl, S.floor, setFloor); else $('rowFloor').style.display='none';
     seg($('segDoors'), [['closed','Closed'],['all_open','Open']], S.doors, setDoors);
     if (TIMES.length>1) seg($('segTime'), [['day','Day'],['night','Night']], S.time, setTime); else $('rowTime').style.display='none';
   }
@@ -308,21 +309,23 @@
   // ---------- gallery ----------
   let gi=0;
   const gal=$('gal'), img=$('galImg'), thumbs=$('galThumbs');
+  const cur=s=>(S.floor==='opt2' && s.opt2) ? s.opt2 : s;
   stills.forEach((s,i)=>{ const b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label',s.caption);
-    b.innerHTML=`<img src="${s.thumb}" alt="" loading="lazy">`; b.onclick=()=>show(i); thumbs.appendChild(b); });
+    b.innerHTML=`<img src="${s.thumb}" alt="" loading="lazy">`; b.dataset.k=i; b.onclick=()=>show(i); thumbs.appendChild(b); });
   if(!stills.length) $('btnGallery').style.display='none';
   function show(i){
     gi=(i+stills.length)%stills.length; const s=stills[gi];
     img.classList.remove('in');
     const pre=new Image();
-    pre.onload=()=>{ img.src=s.src; img.alt=s.caption; requestAnimationFrame(()=>requestAnimationFrame(()=>img.classList.add('in'))); };
-    pre.src=s.src;
+    const cs=cur(s);
+    pre.onload=()=>{ img.src=cs.src; img.alt=s.caption; requestAnimationFrame(()=>requestAnimationFrame(()=>img.classList.add('in'))); };
+    pre.src=cs.src;
     $('galCap').innerHTML=`${s.caption}<small>${String(gi+1).padStart(2,'0')} / ${String(stills.length).padStart(2,'0')}</small>`;
     [...thumbs.children].forEach((b,k)=>b.classList.toggle('on',k===gi));
     thumbs.children[gi]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
-    const nx=new Image(); nx.src=stills[(gi+1)%stills.length].src;
+    const nx=new Image(); nx.src=cur(stills[(gi+1)%stills.length]).src;
   }
-  function openGallery(i=0){ gal.classList.add('open'); gal.setAttribute('aria-hidden','false'); $('galCount').textContent=stills.length+' images'; show(i); }
+  function openGallery(i=0){ [...thumbs.children].forEach((b,k)=>{ const im=b.querySelector('img'); if(im) im.src=cur(stills[k]).thumb; }); gal.classList.add('open'); gal.setAttribute('aria-hidden','false'); $('galCount').textContent=stills.length+' images'; show(i); }
   function closeGallery(){ gal.classList.remove('open'); gal.setAttribute('aria-hidden','true'); }
   $('btnGallery').onclick=()=>openGallery(0);
   $('galClose').onclick=closeGallery; $('galPrev').onclick=()=>show(gi-1); $('galNext').onclick=()=>show(gi+1);
