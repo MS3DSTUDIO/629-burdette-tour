@@ -166,7 +166,7 @@
 </section>
 
 <div class="title ui"><h2>629 Burdette St</h2><p>Primary Bath · 360° tour · <a href="index.html" style="color:inherit;text-decoration:underline;pointer-events:auto">Kitchen</a></p></div>
-<div class="hint ui" id="hint">Drag to look around · circles move you · camera icons show photos · switch the wall options below</div>
+<div class="hint ui" id="hint">Drag to look around · circles move you · camera icons show photos</div>
 <div class="loc-name" id="locname"></div>
 
 <div class="topbtns ui">
@@ -292,7 +292,7 @@
     const narrow = innerWidth < 700;
     const fl = Object.entries(T.floors).map(([k,l])=>[k, narrow ? l.replace(/^(\w)\s*-\s*(\w+).*/, '$1 · $2') : l]);
     seg($('segNode'), T.nodes.map(n=>[n.id,n.label]), S.node, goNode);
-    if (fl.length>=1) seg($('segFloor'), fl, S.floor, setFloor); else $('rowFloor').style.display='none';
+    if (fl.length>1) seg($('segFloor'), fl, S.floor, setFloor); else $('rowFloor').style.display='none';
     if (Object.keys(T.doors).length>1) seg($('segDoors'), [['closed','Closed'],['all_open','Open']], S.doors, setDoors); else $('rowDoors').style.display='none';
     if (TIMES.length>1) seg($('segTime'), [['day','Day'],['night','Night']], S.time, setTime); else $('rowTime').style.display='none';
   }
