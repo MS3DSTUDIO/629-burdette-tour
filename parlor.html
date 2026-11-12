@@ -252,7 +252,7 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
-<script src="parlor_tour.js?v=1"></script>
+<script src="parlor_tour.js?v=2"></script>
 <script>
 (async function(){
   const $ = id => document.getElementById(id);
@@ -456,7 +456,7 @@
     FLT.innerHTML=h;
   }
   let saved={};
-  try { saved=JSON.parse(localStorage.getItem('burdetteParlorAdjust1')||'{}')||{}; } catch(e){ saved={}; }
+  try { saved=JSON.parse(localStorage.getItem('burdetteParlorAdjust2')||'{}')||{}; } catch(e){ saved={}; }
   const qn=k=>{ const v=parseFloat(qs.get(k)); return isFinite(v)?v:null; };
   // old links used ?b=115&c=105 (100 = neutral)
   const legacyB=qn('b'), legacyC=qn('c');
@@ -471,7 +471,7 @@
     $('oBri').textContent=fmt(b,true); $('oCon').textContent=fmt(c,true); $('oCla').textContent=fmt(cl); $('oTex').textContent=fmt(tx);
     for (const r of RNG) r.style.setProperty('--fill', ((r.value-r.min)/(r.max-r.min)*100)+'%');
     if(store){
-      try { localStorage.setItem('burdetteParlorAdjust1', JSON.stringify({br:b,ct:c,cl,tx})); } catch(e){}
+      try { localStorage.setItem('burdetteParlorAdjust2', JSON.stringify({br:b,ct:c,cl,tx})); } catch(e){}
       const q=new URLSearchParams(location.search);
       q.delete('b'); q.delete('c');
       for (const [k,v] of [['br',b],['ct',c],['cl',cl],['tx',tx]]) { if(v!==0) q.set(k,v); else q.delete(k); }
